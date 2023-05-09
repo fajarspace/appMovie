@@ -11,19 +11,17 @@ class MovieSearch extends HTMLElement {
     function createMovieElement(movie) {
       const movieElement = document.createElement("div");
       movieElement.innerHTML = `
-<div>
-        <div class="card" style="display:flex; align-items:center;">
-          
-         <img style="height: 199px; object-fit:contain;" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" /> &emsp;
-         <div>
-         <h2>${movie.title}</h2>
-          <p>
-          ${movie.overview}
-          </p>
-          <a href="/movie/${movie.id}">Lihat detail</a>
-          </div>
-        </div>
-        </div>
+      <div class="card" >
+      <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}" /> &emsp;
+      <div>
+      <h2>${movie.title}</h2>
+      <p><strong>Release Date :</strong> ${movie.release_date} <br/><strong>Rating :</strong> ⭐ ${movie.vote_average} </p>
+       <p>
+       ${movie.overview}
+       </p>
+       </div>
+     </div>
+     <hr/>
       `;
       return movieElement;
     }

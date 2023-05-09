@@ -41,7 +41,7 @@ class MovieUpcomingRenderer {
   render() {
     return `<ol>
     <h1>Upcoming</h1>
-    <div class="card">
+    <div class="card-right">
       ${this.movies
         .slice(0, 9)
         .map(
@@ -50,7 +50,7 @@ class MovieUpcomingRenderer {
           <li>
           <div style="display:flex; justify-content:flex-start; align-items:center;">
           <img style="width: 60px" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />&nbsp;
-          <p>${movie.title}</p>
+          <p><strong>${movie.title}</strong> <br/><strong>Release :</strong> ${movie.release_date} </p>
           </div>
           </li>
         <br>

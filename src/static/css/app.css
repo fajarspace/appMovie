@@ -85,6 +85,16 @@ button[type="submit"]:hover {
 .card {
   background-color: white;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.card-right {
+  background-color: white;
+  margin-top: 20px;
+  align-items: center;
+}
+.card-desc {
+  padding: 20px;
 }
 
 .row::after {
@@ -100,11 +110,16 @@ button[type="submit"]:hover {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .leftcolumn,
   .rightcolumn {
     width: 100%;
     padding: 0;
+  }
+  .card,
+  .card-right {
+    display: block;
+    padding: 20px;
   }
 }
 

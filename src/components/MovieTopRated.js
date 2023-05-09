@@ -20,7 +20,7 @@ class MovieTopRated extends HTMLElement {
             const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
             axios.get(movieUrl).then((response) => {
               const movie = response.data;
-              // Render the movie description here
+              // Render nya
               console.log(movie);
             });
           }
@@ -39,8 +39,8 @@ class MovieTopRatedRenderer {
 
   render() {
     return `<ol>
-    <h1>Top Rated</h1>
-    <div class="card">
+    <h1>Top Rated ⭐</h1>
+    <div class="card-right">
       ${this.movies
         .slice(0, 5)
         .map(
@@ -49,7 +49,7 @@ class MovieTopRatedRenderer {
           <li>
           <div style="display:flex; justify-content:flex-start; align-items:center;">
           <img style="width: 60px" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />&nbsp;
-          <p>${movie.title}</p>
+          <p>${movie.title} <br/>⭐ ${movie.vote_average}</p>
           </div>
           </li>
         <br>
