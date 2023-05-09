@@ -3,19 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <title>Movie App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
+    <nav-bar></nav-bar>
     <div class="container">
-      <h1>Web Movie</h1>
-
-      <form id="search-form">
-        <input type="text" name="query" placeholder="Search movies..." />
-        <button type="submit">Search</button>
-      </form>
-
-      <div id="app"></div>
+      <div class="row">
+        <div class="leftcolumn">
+          <movie-popular></movie-popular>
+        </div>
+        <div class="rightcolumn">
+          <movie-toprated></movie-toprated>
+          <movie-upcoming></movie-upcoming>
+        </div>
+      </div>
     </div>
-
+    <foo-ter></foo-ter>
+    <!-- <movie-popular></movie-popular> -->
     <script src="../dist/bundle.js"></script>
     <script src="../static/js/search.js"></script>
   </body>
