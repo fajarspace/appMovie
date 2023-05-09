@@ -45,15 +45,13 @@ class MovieTopRatedRenderer {
         .slice(0, 5)
         .map(
           (movie) => `
-          
           <li>
-          <div style="display:flex; justify-content:flex-start; align-items:center;">
-          <img style="width: 60px" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />&nbsp;
-          <p>${movie.title} <br/>⭐ ${movie.vote_average}</p>
-          </div>
+            <div style="display:flex; justify-content:flex-start; align-items:center;">
+              <img style="width: 60px" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />&nbsp;
+              <p>${movie.title} <br/>⭐ ${movie.vote_average}</p>
+            </div>
           </li>
-        <br>
-`
+        <br>`
         )
         .join("")}
         </div>

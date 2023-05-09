@@ -1,5 +1,6 @@
 const axios = require("axios");
 const apiKey = "63288fbed2ea65b17d9f1c7d731b981a";
+
 class MovieSearch extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -10,18 +11,18 @@ class MovieSearch extends HTMLElement {
 
     function createMovieElement(movie) {
       const movieElement = document.createElement("div");
-      movieElement.innerHTML = `
-      <div class="card" >
-      <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}" /> &emsp;
-      <div>
-      <h2>${movie.title}</h2>
-      <p><strong>Release Date :</strong> ${movie.release_date} <br/><strong>Rating :</strong> ⭐ ${movie.vote_average} </p>
-       <p>
-       ${movie.overview}
-       </p>
-       </div>
-     </div>
-     <hr/>
+      movieElement.innerHTML = `<div class="card">
+      <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}" /> &emsp; 
+        <div>
+          <h2>${movie.title}</h2>
+          <p>
+            <strong>Release Date :</strong> ${movie.release_date} <br />
+            <strong>Rating :</strong> ⭐ ${movie.vote_average}
+          </p>
+          <p> ${movie.overview} </p>
+        </div>
+      </div>
+      <hr />
       `;
       return movieElement;
     }

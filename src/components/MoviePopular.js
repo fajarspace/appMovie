@@ -31,16 +31,15 @@ class MoviePopularRenderer {
         .map(
           (movie) => `
         <div class="card">
-         <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}" /> &emsp;
-         <div >
-         <h2>${movie.title}</h2>
-         <p><strong>Release Date :</strong> ${movie.release_date} <br/><strong>Rating :</strong> ⭐ ${movie.vote_average} </p>
-          <p>
-          ${movie.overview}
-          </p>
+          <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}" /> &emsp;
+          <div >
+            <h2>${movie.title}</h2>
+            <p><strong>Release Date :</strong> ${movie.release_date} <br/><strong>Rating :</strong> ⭐ ${movie.vote_average} </p>
+            <p>
+            ${movie.overview}
+            </p>
           </div>
-        </div>
-         `
+        </div>`
         )
         .join("")}
     `;

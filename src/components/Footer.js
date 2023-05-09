@@ -4,9 +4,10 @@ class Footer extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `<div class="footer">
-    <h2>Build with ❤️, from Aditya Bani Isro</h2>
-  </div>`;
+    this.innerHTML = `
+    <div class="footer">
+      <h2>Build with ❤️, from Aditya Bani Isro</h2>
+    </div>`;
   }
 }
 
